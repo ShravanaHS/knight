@@ -2,7 +2,7 @@
 # Knight Rider LED Chaser Project
 
 ## 1. Introduction
-Hi! In this repository, I’ve designed a cool Knight Rider LED chaser circuit that creates the iconic back-and-forth LED effect from the Knight Rider TV show. I used a [CD4017 decade counter IC](https://www.ti.com/product/CD4017B) to count from 0 to 10 and light up LEDs in sequence, paired with a [555 Timer IC](https://www.ti.com/product/NE555) for precise clock pulses to control the timing. I tested the circuit’s functionality with simulations in [MultiSim](https://www.ni.com/en-us/shop/electronic-test-instrumentation/multisim.html) and [Tinkercad](https://www.tinkercad.com/), and designed the PCB layout using [Altium Designer](https://www.altium.com/altium-designer). This project is great for beginners.
+Hi! In this repository, I’ve designed a cool Knight Rider LED chaser circuit. I used a [CD4017 decade counter IC](https://www.ti.com/product/CD4017B) to count from 0 to 10 and light up LEDs in sequence, paired with a [555 Timer IC](https://www.ti.com/product/NE555) for precise clock pulses to control the timing. I tested the circuit’s functionality with simulations in [MultiSim](https://www.ni.com/en-us/shop/electronic-test-instrumentation/multisim.html) and [Tinkercad](https://www.tinkercad.com/), and designed the PCB layout using [Altium Designer](https://www.altium.com/altium-designer). This project is great for beginners.
 
 It’s a fun and easy way to get started with electronics and PCB design!
 
@@ -52,6 +52,8 @@ Both simulations confirmed the circuit’s behavior, showing the LEDs blinking i
 </div>
 
 📁 **File**: **([Tinker cad Simulation link](https://www.tinkercad.com/things/2YcT8pzfolp-counter-shs))**
+
+
 📁 **File**: **([MultiSim Simulation](https://github.com/ShravanaHS/knight/blob/main/knight%20rider/simulation%20files/simulation.ms14))**
 
 ---
