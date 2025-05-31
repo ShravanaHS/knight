@@ -6,6 +6,7 @@ Hi! In this repository, I’ve designed a cool Knight Rider LED chaser circuit t
 
 It’s a fun and easy way to get started with electronics and PCB design!
 
+---
 
 ## 2. Project Overview
 
@@ -20,6 +21,13 @@ This project creates a Knight Rider-style LED chaser effect using a custom PCB d
 The PCB was fully designed in Altium Designer, and Gerber files were exported for manufacturing.
 
 
+<div align="center">
+  <img src="https://github.com/ShravanaHS/knight/blob/main/knight%20rider/screenshots/Screenshot%202025-05-31%20150848.png" alt="3D diagram" width="900">
+  <p><strong>Figure 0:Knight Rider LED Chaser 3D </strong></p>
+</div>
+
+---
+
 ## 3. Simulation
 
 To verify the functionality of the Knight Rider LED Chaser circuit, I simulated it using [MultiSim](https://www.ni.com/en-us/shop/electronic-test-instrumentation/multisim.html) and [Tinkercad](https://www.tinkercad.com/). The simulations included the following components:
@@ -27,8 +35,8 @@ To verify the functionality of the Knight Rider LED Chaser circuit, I simulated 
 - **LEDs**: Arranged to demonstrate the sequential lighting effect in a circular pattern.
 - **Resistors**: Used for current limiting to protect the LEDs.
 - **Capacitors**: Configured with the 555 Timer to set the clock pulse frequency.
-- **555 Timer IC**: Generates precise clock pulses to control the timing of the LED sequence. 
-- **CD4017 Decade Counter IC**: Drives the LEDs in sequence by counting from 0 to 10 based on the clock input.
+- **555 Timer IC ([Datasheet](https://www.ti.com/lit/ds/symlink/ne555.pdf))**: Generates precise clock pulses.
+- **CD4017 Decade Counter IC ([Datasheet](https://www.ti.com/lit/ds/symlink/cd4017b.pdf))**: Drives the LEDs by counting from 0 to 10.
 
 Both simulations confirmed the circuit’s behavior, showing the LEDs blinking in the iconic Knight Rider pattern. Below are screenshots of the simulations from MultiSim and Tinkercad:
 
@@ -43,6 +51,10 @@ Both simulations confirmed the circuit’s behavior, showing the LEDs blinking i
   <p><strong>Figure 2: Tinkercad Simulation of Knight Rider LED Chaser</strong></p>
 </div>
 
+📁 **File**: **([Tinker cad Simulation link](https://www.tinkercad.com/things/2YcT8pzfolp-counter-shs))**
+📁 **File**: **([MultiSim Simulation](https://github.com/ShravanaHS/knight/blob/main/knight%20rider/simulation%20files/simulation.ms14))**
+
+---
 
 ## 4. Circuit Diagram / Schematic
 
@@ -59,6 +71,7 @@ After simulating the circuit in [MultiSim](https://www.ni.com/en-us/shop/electro
 
 📁 **File**: `KnightRider.SchDoc`
 
+---
 
 ## 5. PCB Layout
 
@@ -101,6 +114,8 @@ Below are images of the PCB layout showing the top layer, bottom layer, and 2D v
 
 📁 **File**: `KnightRider.PcbDoc`
 
+---
+
 ## 6. Design Rule Check (DRC)
 
 To ensure the PCB layout meets industry standards and is free of errors, I performed Design Rule Checks (DRC) in [Altium Designer](https://www.altium.com/altium-designer). The DRC process verified electrical clearances, trace widths, via sizes, and other parameters defined in the design rules. After careful adjustments, I achieved **0 DRC errors**, confirming the layout is ready for manufacturing.
@@ -112,6 +127,7 @@ Below is a screenshot of the DRC results showing 0 errors:
   <p><strong>Figure 7: DRC Results Showing 0 Errors in Altium Designer</strong></p>
 </div>
 
+---
 
 ## 7. Bill of Materials (BOM)
 
@@ -131,6 +147,7 @@ The Bill of Materials (BOM) lists all components required to assemble the Knight
 | 8   | 22-27-2021          | Male Header, 2.54 mm Pitch, 1x2 Position, 11.7 mm Height, 3.56 mm Tail, RoHS | J1                   | MOLX-22-27-2021_V    | CMP-2000-05537-1    | 1        |
 
 
+---
 
 ## 8. Gerber Files for PCB Manufacturing
 
@@ -152,6 +169,7 @@ The Gerber files required for manufacturing the Knight Rider LED Chaser PCB were
 
 These files are ready for submission to a PCB manufacturer to produce the Knight Rider LED Chaser board.
 
+---
 
 ## 9. Project Files
 
