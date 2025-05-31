@@ -19,8 +19,6 @@ This project creates a Knight Rider-style LED chaser effect using a custom PCB d
 
 The PCB was fully designed in Altium Designer, and Gerber files were exported for manufacturing.
 
----
-# Knight Rider LED Chaser Project
 
 ## 3. Simulation
 
@@ -29,99 +27,131 @@ To verify the functionality of the Knight Rider LED Chaser circuit, I simulated 
 - **LEDs**: Arranged to demonstrate the sequential lighting effect in a circular pattern.
 - **Resistors**: Used for current limiting to protect the LEDs.
 - **Capacitors**: Configured with the 555 Timer to set the clock pulse frequency.
-- **555 Timer IC**: Generates precise clock pulses to control the timing of the LED sequence.
+- **555 Timer IC**: Generates precise clock pulses to control the timing of the LED sequence. 
 - **CD4017 Decade Counter IC**: Drives the LEDs in sequence by counting from 0 to 10 based on the clock input.
 
 Both simulations confirmed the circuit’s behavior, showing the LEDs blinking in the iconic Knight Rider pattern. Below are screenshots of the simulations from MultiSim and Tinkercad:
 
 <div align="center">
-  <img src="path/to/multisim-screenshot.png" alt="MultiSim Simulation" width="600">
+  <img src="https://github.com/ShravanaHS/knight/blob/main/knight%20rider/screenshots/Screenshot%202025-05-23%20213528.png" alt="MultiSim Simulation" width="900">
   <p><strong>Figure 1: MultiSim Simulation of Knight Rider LED Chaser</strong></p>
+</div>
+<br>
+</br>
+<div align="center">
+  <img src="https://github.com/ShravanaHS/knight/blob/main/knight%20rider/screenshots/counter%20shs.png" alt="Tinkercad Simulation" width="900">
+  <p><strong>Figure 2: Tinkercad Simulation of Knight Rider LED Chaser</strong></p>
+</div>
+
+
+## 4. Circuit Diagram / Schematic
+
+The schematic for the Knight Rider LED Chaser was designed in [Altium Designer](https://www.altium.com/altium-designer).
+
+After simulating the circuit in [MultiSim](https://www.ni.com/en-us/shop/electronic-test-instrumentation/multisim.html) and [Tinkercad](https://www.tinkercad.com/), I used Altium Designer’s Manufacturer Part Search to find component footprints, 3D models, and symbols. For components not available in Altium’s library, I sourced simulation SPICE files, models, symbols, and footprints from [SnapEDA](https://www.snapeda.com/), which also provided ERC (Electrical Rule Check) support.
+
+
+
+<div align="center">
+  <img src="https://github.com/ShravanaHS/knight/blob/main/knight%20rider/screenshots/Screenshot%202025-05-31%20150752.png" alt="Knight Rider Schematic" width="900">
+  <p><strong>Figure 3: Schematic of Knight Rider LED Chaser in Altium Designer</strong></p>
+</div>
+
+📁 **File**: `KnightRider.SchDoc`
+
+
+## 5. PCB Layout
+
+After creating the schematic in [Altium Designer](https://www.altium.com/altium-designer), I designed the PCB layout with a focus on aesthetics and simplicity. Key design considerations included:
+
+- Short traces to minimize signal delay and improve efficiency.
+- Proper LED alignment to achieve a visually appealing circular pattern.
+
+To ensure a robust and manufacturable design, I implemented the following:
+
+- **Design Rule Checks (DRC)**: Applied DRC in Altium Designer to verify the layout against industry standards.
+- calculated trace parameters using [DigiKey’s Trace Width Calculator](https://www.digikey.com/en/resources/conversion-calculators/conversion-calculator-pcb-trace-width) and following the [IPC-2221 standard](https://www.ipc.org/standards).
+- **Trace and Via Parameters**:
+  - Set electrical clearance to 0.25 mm and trace width to 0.2 mm.
+  - Adjusted via hole size to 0.4 mm and via diameter to 0.5 mm for reliable connectivity.
+- **Layer Stack Configuration**:
+  - Used the Layer Stack Manager in Altium Designer to define:
+    - Dielectric thickness of 0.8 mm using FR4 material.
+    - Top layer thickness of 0.1 mm (CF-003).
+    - Solder mask layer thickness of 0.05 mm (SM-001).
+
+Component footprints and 3D models were sourced from Altium’s Manufacturer Part Search and [SnapEDA](https://www.snapeda.com/) to ensure accuracy. The final PCB layout was exported as Gerber files for manufacturing.
+
+Below are images of the PCB layout showing the top layer, bottom layer, and 2D view:
+
+<div align="center">
+  <img src="https://github.com/ShravanaHS/knight/blob/main/knight%20rider/screenshots/Screenshot%202025-05-31%20150824.png" width="900">
+  <p><strong>Figure 4: Top Layer of Knight Rider LED Chaser PCB</strong></p>
 </div>
 
 <div align="center">
-  <img src="path/to/tinkercad-screenshot.png" alt="Tinkercad Simulation" width="600">
-  <p><strong>Figure 2: Tinkercad Simulation of Knight Rider LED Chaser</strong></p>
+  <img src="https://github.com/ShravanaHS/knight/blob/main/knight%20rider/screenshots/Screenshot%202025-05-31%20150836.png" width="900">
+  <p><strong>Figure 5: Bottom Layer of Knight Rider LED Chaser PCB</strong></p>
 </div>
-## 3. Circuit Diagram / Schematic
 
-The schematic was created in **Altium Designer**, and it includes the LEDs, resistors, capacitors, 555 timer IC and CD4017 IC.
+<div align="center">
+  <img src="https://github.com/ShravanaHS/knight/blob/main/knight%20rider/screenshots/Screenshot%202025-05-31%20150803.png" alt="PCB 2D View" width="900">
+  <p><strong>Figure 6: Knight Rider LED Chaser PCB</strong></p>
+</div>
+
+📁 **File**: `KnightRider.PcbDoc`
+
+## 6. Design Rule Check (DRC)
+
+To ensure the PCB layout meets industry standards and is free of errors, I performed Design Rule Checks (DRC) in [Altium Designer](https://www.altium.com/altium-designer). The DRC process verified electrical clearances, trace widths, via sizes, and other parameters defined in the design rules. After careful adjustments, I achieved **0 DRC errors**, confirming the layout is ready for manufacturing.
+
+Below is a screenshot of the DRC results showing 0 errors:
+
+<div align="center">
+  <img src="https://github.com/ShravanaHS/knight/raw/main/knight%20rider/screenshots/Screenshot%202025-05-31%20150951.png" alt="DRC Results" width="900">
+  <p><strong>Figure 7: DRC Results Showing 0 Errors in Altium Designer</strong></p>
+</div>
 
 
-📁 **File:** `KnightRider.SchDoc`
+## 7. Bill of Materials (BOM)
 
----
+The Bill of Materials (BOM) lists all components required to assemble the Knight Rider LED Chaser circuit. The complete BOM is available in the `Outputs/` folder as a CSV file for reference during procurement and manufacturing.
 
-## 4. PCB Layout
+📁 **File**: `Outputs/KnightRider_BOM.CSV`
 
-The PCB was laid out with aesthetics and simplicity in mind. Short traces and proper LED alignment were maintained.
+| No. | Part Number          | Description                                                                 | Reference Designator | Footprint             | Component ID         | Quantity |
+|-----|----------------------|-----------------------------------------------------------------------------|----------------------|-----------------------|----------------------|----------|
+| 1   | RCER71E226MWM1H03A  | Capacitor, Ceramic, 22 µF, 25 V, X7R, Radial, RoHS                          | C1, C2               | FP-RCEWM1-MFG         | CMP-06035-003622-1  | 2        |
+| 2   | OD103JE             | Resistor, Carbon Composition, 10 kΩ, ±5%, 250 V, 2-Pin THD, RoHS, Bulk      | R3                   | OMTE-RES7X2.5-2      | CMP-2000-06865-1    | 1        |
+| 3   | NE555P              | Precision Timer IC, 4.5–16 V, 0–70 °C, 8-Pin DIP, Pb-Free, Tube             | U2                   | P0008A               | CMP-2000-04954-1    | 1        |
+| 4   | MFR-25FBF52-1M      | Resistor, Axial, 1 MΩ, ±1%, 250 mW, -55–155 °C, 2-Pin THD, RoHS, Bulk       | R1                   | RESA60-630X240       | CMP-1659-00070-1    | 1        |
+| 5   | HLMP-1719           | LED, Yellow, Diffused, T-1, Through-Hole, RoHS                              | LED1–LED10           | FP-HLMP-1719-MFG     | CMP-2000-06410-2    | 10       |
+| 6   | CD74HC4017E         | Decade Counter/Divider IC, High-Speed CMOS, 10 Decoded Outputs, 16-Pin DIP   | U1                   | N0016A               | CMP-1623-00548-2    | 1        |
+| 7   | 3296Y-1-253LF       | Trimmer Potentiometer, Cermet, 25 kΩ, ±10%, 500 mW, 0–70 °C, 300 V, RoHS    | R2                   | 3296Y_MFG            | CMP-00059-00574897-1| 1        |
+| 8   | 22-27-2021          | Male Header, 2.54 mm Pitch, 1x2 Position, 11.7 mm Height, 3.56 mm Tail, RoHS | J1                   | MOLX-22-27-2021_V    | CMP-2000-05537-1    | 1        |
 
-📁 **File:** `KnightRider.PcbDoc`
 
----
 
-## 5. Bill of Materials (BOM)
+## 8. Gerber Files for PCB Manufacturing
 
-A full BOM is provided in the `Outputs/` folder, listing all components required to build the board.
+The Gerber files required for manufacturing the Knight Rider LED Chaser PCB were generated from the PCB layout designed in [Altium Designer](https://www.altium.com/altium-designer). These files provide all necessary information for PCB fabrication, including copper layers, solder masks, silkscreen, drill data, and board outline. They are stored in the `Outputs/Gerber/` directory and have been verified to comply with industry standards for manufacturing.
 
-📁 **File:** `Outputs/KnightRider_BOM.CSV`
+📁 **Directory**: `Outputs/Gerber/`
 
-| No. | Component         | Value     | Description          |
-|-----|-------------------|-----------|----------------------|
-| 1   | LEDs              | 8 or 10   | 5mm Red LEDs         |
-| 2   | Resistors         | 330Ω      | For LED current limit|
-| 3   | IC (optional)     | 555 / CD4017 | Timing + Logic     |
-| 4   | Capacitor         | 10 µF     | Timing stability     |
-| 5   | Power Supply      | 5V        | USB or Battery       |
+| File Extension | Description                     |
+|----------------|---------------------------------|
+| `.GTL`         | Top copper layer                |
+| `.GBL`         | Bottom copper layer             |
+| `.GTS`         | Top solder mask                 |
+| `.GBS`         | Bottom solder mask              |
+| `.GTO`         | Top silkscreen                  |
+| `.GBO`         | Bottom silkscreen               |
+| `.TXT`         | Drill file (NC drill data)      |
+| `.GML`         | Board outline/mechanical layer  |
+| `.DRD`         | Drill drawing data              |
 
----
+These files are ready for submission to a PCB manufacturer to produce the Knight Rider LED Chaser board.
 
-## 6. Gerber Files for PCB Manufacturing
-
-Gerber files for manufacturing are available in the `Outputs/Gerber/` directory. These include:
-
-- Top/Bottom Layer
-- Silkscreen
-- Soldermask
-- Drill file
-- Board outline
-
-📁 **Directory:** `Outputs/Gerber/`
-
-| File Type | Description                  |
-|-----------|------------------------------|
-| `.GTL`    | Top copper layer              |
-| `.GBL`    | Bottom copper layer           |
-| `.GTS`    | Top soldermask                |
-| `.GBS`    | Bottom soldermask             |
-| `.GTO`    | Top silkscreen                |
-| `.GBO`    | Bottom silkscreen             |
-| `.TXT`    | Drill file                    |
-| `.GML`    | Outline/mechanical layer      |
-| `.DRD`    | Drill data                    |
-
----
-
-## 7. How It Works
-
-1. The circuit uses either:
-   - A **555 timer + CD4017** IC to sequentially turn LEDs on and off.
-   - A **microcontroller (e.g., ATtiny/ATmega)** running a simple chaser program.
-
-2. LEDs are connected through resistors to prevent overcurrent.
-
-3. The timing circuit ensures LEDs light up one by one, giving the running effect.
-
----
-
-## 8. Applications and Learning Outcomes
-
-- Understanding **timing circuits** (monostable/astable)
-- Learning **digital logic sequencing**
-- Introduction to **PCB layout tools** like Altium
-- Useful as a **visual debugging aid**, **decoration**, or **intro project** for embedded systems
-
----
 
 ## 9. Project Files
 
@@ -146,6 +176,6 @@ Gerber files for manufacturing are available in the `Outputs/Gerber/` directory.
 
 | Creator / Resource       | Link                                                                 |
 |--------------------------|----------------------------------------------------------------------|
-| GreatScott!              | [YouTube](https://www.youtube.com/watch?v=f3ptl9K2Zxg)                |
-| Afrotechmods             | [YouTube](https://www.youtube.com/watch?v=EGxL8vYqIP0)                |
-| EEVblog                  | [YouTube](https://www.youtube.com/watch?v=tbkD73I1T2Y)                |
+| Audas                    | [YouTube](https://www.youtube.com/watch?v=6N2A6LtBWh0&t=498s)        |
+| Elonics - Electronics Projects on Breadboard  | [YouTube](https://www.youtube.com/watch?v=Dggk8SIrwZU) |
+| Robert Feranec   | [YouTube](https://www.youtube.com/watch?v=PqFtSpAXB9Q&list=PLXvLToQzgzdduBaD4horowdWgcG5uGUW4)|
